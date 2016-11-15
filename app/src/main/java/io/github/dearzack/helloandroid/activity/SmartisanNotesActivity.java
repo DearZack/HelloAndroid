@@ -31,7 +31,6 @@ public class SmartisanNotesActivity extends BaseActivity {
                         + "日的中国大陆社会化问答网站，产品形态模仿了美国类似网站Quora。“知乎”在古汉语中意为“知道吗”。2012 年 2 "
                         + "月底，知乎使用“发现更大的世界”作为其宣传口号。 ")
                 .saveCacheFile();
-
         Log.e("zx", file.getAbsolutePath());
 
     }

@@ -1,7 +1,6 @@
 package io.github.dearzack.helloandroid;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -9,11 +8,13 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.github.dearzack.helloandroid.activity.BaseActivity;
 import io.github.dearzack.helloandroid.activity.JsoupActivity;
+import io.github.dearzack.helloandroid.activity.SQLiteOnWebActivity;
+import io.github.dearzack.helloandroid.activity.SmartisanNotesActivity;
 import io.github.dearzack.helloandroid.adapter.MainAdapter;
-import io.github.dearzack.helloandroid.bean.Test;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private RecyclerView recyclerView;
     private List<String> data;
@@ -32,17 +33,13 @@ public class MainActivity extends AppCompatActivity {
         });
         recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
         recyclerView.setAdapter(mainAdapter);
-        for (int i = 0; i < 10; i++) {
-            Test test = new Test();
-            test.setName("zack" + i);
-            test.setPassword("zackPassword" + i);
-            APP.testDao.insertOrReplace(test);
-        }
     }
 
     private void initData() {
         data = new ArrayList<>();
         data.add("Jsoup");
+        data.add("SQLiteOnWeb");
+        data.add("SmartisanNotes");
     }
 
     private void gotoNewActivity(int position) {
@@ -50,6 +47,12 @@ public class MainActivity extends AppCompatActivity {
         switch (position) {
             case 0:
                 intent = new Intent(MainActivity.this, JsoupActivity.class);
+                break;
+            case 1:
+                intent = new Intent(MainActivity.this, SQLiteOnWebActivity.class);
+                break;
+            case 2:
+                intent = new Intent(MainActivity.this, SmartisanNotesActivity.class);
                 break;
         }
         if (intent != null) {

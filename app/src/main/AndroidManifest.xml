@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.github.dearzack.helloandroid">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".APP"
@@ -18,7 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.JsoupActivity"></activity>
+        <activity android:name=".activity.JsoupActivity" />
+        <activity android:name=".activity.SQLiteOnWebActivity" />
+        <activity android:name=".activity.SmartisanNotesActivity" />
+        <activity android:name=".activity.BaseActivity"></activity>
     </application>
 
 </manifest>

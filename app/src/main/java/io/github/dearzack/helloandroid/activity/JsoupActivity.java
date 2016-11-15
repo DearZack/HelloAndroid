@@ -1,7 +1,6 @@
 package io.github.dearzack.helloandroid.activity;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import org.jsoup.Jsoup;
@@ -9,7 +8,7 @@ import org.jsoup.nodes.Document;
 
 import io.github.dearzack.helloandroid.R;
 
-public class JsoupActivity extends AppCompatActivity {
+public class JsoupActivity extends BaseActivity {
 
     private TextView textView;
 

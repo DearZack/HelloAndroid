@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import java.io.File;
 
 import io.github.dearzack.helloandroid.R;
-import io.github.dearzack.helloandroid.util.SmartisanNotes;
+import io.github.dearzack.helloandroid.view.SmartisanNotes;
 
 public class SmartisanNotesActivity extends BaseActivity {
 

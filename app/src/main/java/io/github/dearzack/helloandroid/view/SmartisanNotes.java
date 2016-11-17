@@ -1,4 +1,4 @@
-package io.github.dearzack.helloandroid.util;
+package io.github.dearzack.helloandroid.view;
 
 import android.content.Context;
 import android.graphics.Bitmap;

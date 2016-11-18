@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="io.github.dearzack.helloandroid">
 
+    <uses-sdk tools:overrideLibrary="moe.codeest.enviews" />
+
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".APP"
@@ -23,7 +26,8 @@
         <activity android:name=".activity.JsoupActivity" />
         <activity android:name=".activity.SQLiteOnWebActivity" />
         <activity android:name=".activity.SmartisanNotesActivity" />
-        <activity android:name=".activity.BaseActivity"></activity>
+        <activity android:name=".activity.BaseActivity" />
+        <activity android:name=".activity.ENViewsActivity"></activity>
     </application>
 
 </manifest>

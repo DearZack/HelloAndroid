@@ -28,6 +28,11 @@ android {
         daoPackage 'io.github.dearzack.helloandroid.greendao'
         targetGenDir 'src/main/java'
     }
+    allprojects {
+        repositories {
+            maven { url "https://jitpack.io" }
+        }
+    }
 }
 
 dependencies {
@@ -42,4 +47,5 @@ dependencies {
     compile 'org.greenrobot:greendao:3.2.0'
     debugCompile 'io.github.skyhacker2:sqliteonweb:1.0.1'
     releaseCompile 'io.github.skyhacker2:sqliteonweb-no-op:1.0.2'
+    compile 'com.github.codeestX:ENViews:v1.0.0'
 }

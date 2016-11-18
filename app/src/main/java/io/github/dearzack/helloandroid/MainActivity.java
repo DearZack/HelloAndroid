@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.github.dearzack.helloandroid.activity.BaseActivity;
+import io.github.dearzack.helloandroid.activity.ENViewsActivity;
 import io.github.dearzack.helloandroid.activity.JsoupActivity;
 import io.github.dearzack.helloandroid.activity.SQLiteOnWebActivity;
 import io.github.dearzack.helloandroid.activity.SmartisanNotesActivity;
@@ -40,6 +41,7 @@ public class MainActivity extends BaseActivity {
         data.add("Jsoup");
         data.add("SQLiteOnWeb");
         data.add("SmartisanNotes");
+        data.add("ENViews");
     }
 
     private void gotoNewActivity(int position) {
@@ -54,6 +56,8 @@ public class MainActivity extends BaseActivity {
             case 2:
                 intent = new Intent(MainActivity.this, SmartisanNotesActivity.class);
                 break;
+            case 3:
+                intent = new Intent(MainActivity.this, ENViewsActivity.class);
         }
         if (intent != null) {
             startActivity(intent);

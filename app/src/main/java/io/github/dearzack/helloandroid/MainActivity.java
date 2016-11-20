@@ -24,6 +24,8 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        BarUtils.setTransparentStatusBar(this);
+//        BarUtils.setColor(this, 0xff0000);
         initData();
         recyclerView = (RecyclerView) findViewById(R.id.main_list);
         MainAdapter mainAdapter = new MainAdapter(this, data, new MainAdapter.OnItemClickListener() {

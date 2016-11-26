@@ -27,7 +27,8 @@
         <activity android:name=".activity.SQLiteOnWebActivity" />
         <activity android:name=".activity.SmartisanNotesActivity" />
         <activity android:name=".activity.BaseActivity" />
-        <activity android:name=".activity.ENViewsActivity"></activity>
+        <activity android:name=".activity.ENViewsActivity" />
+        <activity android:name=".activity.NetEasyPlayerActivity"></activity>
     </application>
 
 </manifest>

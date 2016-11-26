@@ -2,10 +2,12 @@ package io.github.dearzack.helloandroid;
 
 import android.app.Application;
 import android.content.Context;
+import android.util.Log;
+
+import com.amitshekhar.DebugDB;
 
 import io.github.dearzack.helloandroid.greendao.TestDao;
 import io.github.dearzack.helloandroid.util.GreenDaoManager;
-import io.github.skyhacker2.sqliteonweb.SQLiteOnWeb;
 
 /**
  * Created by Zack on 2016/11/12.
@@ -30,6 +32,6 @@ public class APP extends Application {
     private void initDB() {
         GreenDaoManager cdm = GreenDaoManager.getInstance();
         testDao = cdm.getSession().getTestDao();
-        SQLiteOnWeb.init(this).start();
+//        SQLiteOnWeb.init(this).start();
     }
 }

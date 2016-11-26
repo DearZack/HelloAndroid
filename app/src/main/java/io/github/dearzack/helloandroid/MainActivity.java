@@ -11,6 +11,7 @@ import java.util.List;
 import io.github.dearzack.helloandroid.activity.BaseActivity;
 import io.github.dearzack.helloandroid.activity.ENViewsActivity;
 import io.github.dearzack.helloandroid.activity.JsoupActivity;
+import io.github.dearzack.helloandroid.activity.NetEasyPlayerActivity;
 import io.github.dearzack.helloandroid.activity.SQLiteOnWebActivity;
 import io.github.dearzack.helloandroid.activity.SmartisanNotesActivity;
 import io.github.dearzack.helloandroid.adapter.MainAdapter;
@@ -44,6 +45,7 @@ public class MainActivity extends BaseActivity {
         data.add("SQLiteOnWeb");
         data.add("SmartisanNotes");
         data.add("ENViews");
+        data.add("NetEasyMusic");
     }
 
     private void gotoNewActivity(int position) {
@@ -60,6 +62,10 @@ public class MainActivity extends BaseActivity {
                 break;
             case 3:
                 intent = new Intent(MainActivity.this, ENViewsActivity.class);
+                break;
+            case 4:
+                intent = new Intent(MainActivity.this, NetEasyPlayerActivity.class);
+                break;
         }
         if (intent != null) {
             startActivity(intent);

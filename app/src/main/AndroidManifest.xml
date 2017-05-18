@@ -28,7 +28,8 @@
         <activity android:name=".activity.SmartisanNotesActivity" />
         <activity android:name=".activity.BaseActivity" />
         <activity android:name=".activity.ENViewsActivity" />
-        <activity android:name=".activity.NetEasyPlayerActivity"></activity>
+        <activity android:name=".activity.NetEasyPlayerActivity" />
+        <activity android:name=".activity.IconfontActivity"></activity>
     </application>
 
 </manifest>

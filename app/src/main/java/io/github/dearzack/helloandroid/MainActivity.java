@@ -10,6 +10,7 @@ import java.util.List;
 
 import io.github.dearzack.helloandroid.activity.BaseActivity;
 import io.github.dearzack.helloandroid.activity.ENViewsActivity;
+import io.github.dearzack.helloandroid.activity.IconfontActivity;
 import io.github.dearzack.helloandroid.activity.JsoupActivity;
 import io.github.dearzack.helloandroid.activity.NetEasyPlayerActivity;
 import io.github.dearzack.helloandroid.activity.SQLiteOnWebActivity;
@@ -46,6 +47,7 @@ public class MainActivity extends BaseActivity {
         data.add("SmartisanNotes");
         data.add("ENViews");
         data.add("NetEasyMusic");
+        data.add("Iconfont");
     }
 
     private void gotoNewActivity(int position) {
@@ -65,6 +67,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case 4:
                 intent = new Intent(MainActivity.this, NetEasyPlayerActivity.class);
+                break;
+            case 5:
+                intent = new Intent(MainActivity.this, IconfontActivity.class);
                 break;
         }
         if (intent != null) {

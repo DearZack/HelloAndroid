@@ -29,7 +29,10 @@
         <activity android:name=".activity.BaseActivity" />
         <activity android:name=".activity.ENViewsActivity" />
         <activity android:name=".activity.NetEasyPlayerActivity" />
-        <activity android:name=".activity.IconfontActivity"></activity>
+        <activity android:name=".activity.IconfontActivity" />
+        <activity android:name=".activity.CoordinatorActivity" />
+        <activity android:name=".activity.TransitionActivity" />
+        <activity android:name=".activity.TouchActivity"></activity>
     </application>
 
 </manifest>

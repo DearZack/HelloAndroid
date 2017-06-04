@@ -9,12 +9,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.github.dearzack.helloandroid.activity.BaseActivity;
+import io.github.dearzack.helloandroid.activity.CoordinatorActivity;
 import io.github.dearzack.helloandroid.activity.ENViewsActivity;
 import io.github.dearzack.helloandroid.activity.IconfontActivity;
 import io.github.dearzack.helloandroid.activity.JsoupActivity;
 import io.github.dearzack.helloandroid.activity.NetEasyPlayerActivity;
 import io.github.dearzack.helloandroid.activity.SQLiteOnWebActivity;
 import io.github.dearzack.helloandroid.activity.SmartisanNotesActivity;
+import io.github.dearzack.helloandroid.activity.TouchActivity;
 import io.github.dearzack.helloandroid.adapter.MainAdapter;
 
 public class MainActivity extends BaseActivity {
@@ -48,6 +50,8 @@ public class MainActivity extends BaseActivity {
         data.add("ENViews");
         data.add("NetEasyMusic");
         data.add("Iconfont");
+        data.add("Coordinator");
+        data.add("Touch");
     }
 
     private void gotoNewActivity(int position) {
@@ -70,6 +74,12 @@ public class MainActivity extends BaseActivity {
                 break;
             case 5:
                 intent = new Intent(MainActivity.this, IconfontActivity.class);
+                break;
+            case 6:
+                intent = new Intent(MainActivity.this, CoordinatorActivity.class);
+                break;
+            case 7:
+                intent = new Intent(MainActivity.this, TouchActivity.class);
                 break;
         }
         if (intent != null) {

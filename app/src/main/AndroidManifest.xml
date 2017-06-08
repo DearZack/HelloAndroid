@@ -32,7 +32,8 @@
         <activity android:name=".activity.IconfontActivity" />
         <activity android:name=".activity.CoordinatorActivity" />
         <activity android:name=".activity.TransitionActivity" />
-        <activity android:name=".activity.TouchActivity"></activity>
+        <activity android:name=".activity.TouchActivity" />
+        <activity android:name=".activity.TransitionAnimationActivity"></activity>
     </application>
 
 </manifest>

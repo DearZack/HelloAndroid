@@ -17,6 +17,7 @@ import io.github.dearzack.helloandroid.activity.NetEasyPlayerActivity;
 import io.github.dearzack.helloandroid.activity.SQLiteOnWebActivity;
 import io.github.dearzack.helloandroid.activity.SmartisanNotesActivity;
 import io.github.dearzack.helloandroid.activity.TouchActivity;
+import io.github.dearzack.helloandroid.activity.TransitionAnimationActivity;
 import io.github.dearzack.helloandroid.adapter.MainAdapter;
 
 public class MainActivity extends BaseActivity {
@@ -52,6 +53,7 @@ public class MainActivity extends BaseActivity {
         data.add("Iconfont");
         data.add("Coordinator");
         data.add("Touch");
+        data.add("Transition");
     }
 
     private void gotoNewActivity(int position) {
@@ -80,6 +82,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case 7:
                 intent = new Intent(MainActivity.this, TouchActivity.class);
+                break;
+            case 8:
+                intent = new Intent(MainActivity.this, TransitionAnimationActivity.class);
                 break;
         }
         if (intent != null) {

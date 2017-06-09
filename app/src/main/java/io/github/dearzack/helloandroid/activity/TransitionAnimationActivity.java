@@ -1,6 +1,9 @@
 package io.github.dearzack.helloandroid.activity;
 
+import android.Manifest;
 import android.app.Fragment;
+import android.support.annotation.RequiresPermission;
+import android.support.design.widget.Snackbar;
 import android.support.transition.ChangeBounds;
 import android.support.transition.Fade;
 import android.support.transition.Scene;
@@ -27,6 +30,8 @@ public class TransitionAnimationActivity extends AppCompatActivity {
     }
 
 
+    //该注解表示，入伙调用goToScene时，会用到网络，没有的话编译时会报错
+    @RequiresPermission(Manifest.permission.INTERNET)
     private void goToScene() {
         ChangeBounds changeBounds = new ChangeBounds();
         changeBounds.setDuration(2000);

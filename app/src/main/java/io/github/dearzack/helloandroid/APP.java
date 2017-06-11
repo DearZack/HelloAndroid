@@ -2,9 +2,7 @@ package io.github.dearzack.helloandroid;
 
 import android.app.Application;
 import android.content.Context;
-import android.util.Log;
-
-import com.amitshekhar.DebugDB;
+import android.os.StrictMode;
 
 import io.github.dearzack.helloandroid.greendao.TestDao;
 import io.github.dearzack.helloandroid.util.GreenDaoManager;
@@ -20,6 +18,17 @@ public class APP extends Application {
 
     @Override
     public void onCreate() {
+        if (BuildConfig.DEBUG) {
+            StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
+                    .detectAll()
+                    .penaltyLog()
+                    .build());
+            StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
+                    .detectAll()
+                    .penaltyLog()
+                    .build());
+            //BlockCanary是一个第三方库，是一个非侵入式的性能监控函数库，详情见官网。
+        }
         super.onCreate();
         context = getApplicationContext();
         initDB();

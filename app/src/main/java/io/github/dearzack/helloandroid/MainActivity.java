@@ -18,6 +18,7 @@ import io.github.dearzack.helloandroid.activity.SQLiteOnWebActivity;
 import io.github.dearzack.helloandroid.activity.SmartisanNotesActivity;
 import io.github.dearzack.helloandroid.activity.TouchActivity;
 import io.github.dearzack.helloandroid.activity.TransitionAnimationActivity;
+import io.github.dearzack.helloandroid.activity.WebActivity;
 import io.github.dearzack.helloandroid.adapter.MainAdapter;
 
 public class MainActivity extends BaseActivity {
@@ -54,6 +55,7 @@ public class MainActivity extends BaseActivity {
         data.add("Coordinator");
         data.add("Touch");
         data.add("Transition");
+        data.add("Web");
     }
 
     private void gotoNewActivity(int position) {
@@ -85,6 +87,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case 8:
                 intent = new Intent(MainActivity.this, TransitionAnimationActivity.class);
+                break;
+            case 9:
+                intent = new Intent(MainActivity.this, WebActivity.class);
                 break;
         }
         if (intent != null) {

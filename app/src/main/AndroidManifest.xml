@@ -33,7 +33,8 @@
         <activity android:name=".activity.CoordinatorActivity" />
         <activity android:name=".activity.TransitionActivity" />
         <activity android:name=".activity.TouchActivity" />
-        <activity android:name=".activity.TransitionAnimationActivity"></activity>
+        <activity android:name=".activity.TransitionAnimationActivity" />
+        <activity android:name=".activity.WebActivity"></activity>
     </application>
 
 </manifest>

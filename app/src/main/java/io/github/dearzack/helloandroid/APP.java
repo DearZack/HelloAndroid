@@ -4,6 +4,9 @@ import android.app.Application;
 import android.content.Context;
 import android.os.StrictMode;
 
+import com.orhanobut.logger.DiskLogAdapter;
+import com.orhanobut.logger.Logger;
+
 import io.github.dearzack.helloandroid.greendao.TestDao;
 import io.github.dearzack.helloandroid.util.GreenDaoManager;
 
@@ -32,6 +35,7 @@ public class APP extends Application {
         super.onCreate();
         context = getApplicationContext();
         initDB();
+        Logger.addLogAdapter(new DiskLogAdapter());
     }
 
     public static Context getContext() {

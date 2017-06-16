@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.google.gson.Gson;
+import com.orhanobut.logger.Logger;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +23,7 @@ import io.github.dearzack.helloandroid.activity.TouchActivity;
 import io.github.dearzack.helloandroid.activity.TransitionAnimationActivity;
 import io.github.dearzack.helloandroid.activity.WebActivity;
 import io.github.dearzack.helloandroid.adapter.MainAdapter;
+import io.github.dearzack.helloandroid.bean.Person;
 
 public class MainActivity extends BaseActivity {
 
@@ -42,6 +46,22 @@ public class MainActivity extends BaseActivity {
         });
         recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
         recyclerView.setAdapter(mainAdapter);
+        loggerTest();
+    }
+
+    private void loggerTest() {
+        Logger.d("hello logger");
+        Logger.d("debug");
+        Logger.e("error");
+        Logger.w("warning");
+        Logger.v("verbose");
+        Logger.i("information");
+        Logger.wtf("wtf!!!!");
+        Gson gson = new Gson();
+        Person person= new Person();
+        person.setName("hello");
+        person.setHead(1);
+        Logger.json(gson.toJson(person));
     }
 
     private void initData() {
